@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jpmc.dao.StudentDao;
+import com.jpmc.model.Student;
 import com.jpmc.model.User;
 
 @RestController
@@ -27,7 +28,8 @@ public class StudentRestController {
 	@RequestMapping("/register")
 	public User register(List<User> list) {
 		System.out.println("got the request for registration");
-		studentDao.register();		
+		Student student = null;;
+		studentDao.register(student);		
 		return null;
 	}
 	
